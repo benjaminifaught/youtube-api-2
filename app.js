@@ -22,7 +22,10 @@ console.log(myData[0]);
 function showResults(results){
   var html = "";
   $.each(results, function(index,value){
+    var pic = value.snippet.thumbnails.default.url;
+    console.log (pic);
     html += '<p>' + value.snippet.title + '</p>';
+    html += '<p>' + pic + '</p>';
     console.log(value.snippet.title);
   });
   $('#search-results').html(html); 
